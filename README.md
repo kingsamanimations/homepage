@@ -7,5 +7,5 @@ Responsive Design
 
 I had help from tutorials and references to make this.
 
-# View the Websit here:
+# View the Website here:
 https://kingsamanimations.github.io/homepage/
