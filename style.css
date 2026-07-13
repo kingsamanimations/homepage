@@ -438,3 +438,88 @@ p {
 .footer-container img {
   border-radius: 10px;
 }
+/* For pop-up */
+
+.card {
+  position: relative;
+  /* display: inline-block; */
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#popup-modal {
+  transition: transform 0.3s ease-in-out, opacity 0.4s ease;
+  transform: translate(-50%, -100%);
+}
+
+#popup-modal.show {
+  transform: translate(-50%, -50%);
+}
+
+/* The actual popup */
+.Pops-up {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1000;
+
+  transform: translate(-50%, -50%);
+
+  background: #94934f;
+  color: white;
+
+  padding: 20px;
+  border-radius: 10px;
+
+  visibility: hidden;
+}
+/* Toggle this class - hide and show the popup */
+.Pops-up.show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Pop up Button */
+button {
+  position: relative;
+  /* display: inline-block; */
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 20px;
+  color: #ffffff;
+  background-color: #dadd0e;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+button :hover {
+    background-color: white;
+    width: 100%;
+    border-left: 5px solid #eede9d;
+    transform: translateY(-15px);
+}
+
+.backdrop {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  background: #000;
+  transition: opacity 0.3s ease;
+  opacity: 0%;
+  z-index: 999;
+}
+
+.backdrop.show {
+  opacity: 30%;
+}
